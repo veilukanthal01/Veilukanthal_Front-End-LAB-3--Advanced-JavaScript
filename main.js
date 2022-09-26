@@ -44,7 +44,7 @@
     document.querySelector('.weather').innerHTML="";
     document.querySelector('.hi-low').innerHTML="";
     document.querySelector('.date').innerHTML="";
-    document.querySelector('.error').innerHTML="Please enter a valid city name";
+    document.querySelector('.error').innerHTML="Please enter a valid city to be searched";
 
   }
 
