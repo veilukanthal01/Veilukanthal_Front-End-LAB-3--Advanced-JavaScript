@@ -26,6 +26,11 @@
         console.log(responseJson.cod);
         if (responseJson.cod === 200)
           displayResults(responseJson);
+          if(responseJson.cod == 404){
+            emptyResults();
+            alert("City not found");
+          }
+          
       })
       .catch((err) => {
         console.log("Error in calling API ", err);
@@ -33,8 +38,19 @@
 
   }
 
+  function emptyResults(responseJson) {
+    document.querySelector('.city').innerHTML="";
+    document.querySelector('.temp').innerHTML="";
+    document.querySelector('.weather').innerHTML="";
+    document.querySelector('.hi-low').innerHTML="";
+    document.querySelector('.date').innerHTML="";
+    document.querySelector('.error').innerHTML="Please enter a valid city name";
+
+  }
+
   function displayResults(responseJson) {
 
+    document.querySelector('.error').innerHTML="";
 
     let city = document.querySelector('.city');
 

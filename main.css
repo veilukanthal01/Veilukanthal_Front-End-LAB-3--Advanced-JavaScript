@@ -61,6 +61,13 @@ main {
   margin-bottom: 5px;
 }
 
+.location .error {
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
 .location .date {
   color: #FFF;
   font-size: 16px;
